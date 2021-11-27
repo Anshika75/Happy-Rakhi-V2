@@ -1,0 +1,886 @@
+<!-----PLEASE PLEASE PLEASE------>
+<!-------READ THESE LINES------>
+<!-----Click on brothers or sisters button on landing page, to discover further code. ----->
+<!-----I am very new to coding so this code can appear boring ---->
+<!-----No. of days i commited to this code = 12----->
+<!----I will not request you all to upvote because that's not the reason i created it---->
+<!----My only aim to create this is to show my gratitude which according to me i fail to express---->
+<!----  This is an ADVANCE WISH code as I won't be able to make it tomorrow due to few issues:/ --->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\Anshika Thakur\Desktop\r\rb\rb.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.0/howler.js"></script>
+</head>
+<body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Chango&family=Courgette&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
+
+
+}
+.main{
+    height: 100vh;
+    width: 100vw;
+    background-image: repeating-linear-gradient(45deg, rgba(130,213,126, 0.43) 0px, rgba(130,213,126, 0.43) 1px,transparent 1px, transparent 11px,rgba(130,213,126, 0.43) 11px, rgba(130,213,126, 0.43) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(90deg, rgba(130,213,126, 0.43) 0px, rgba(130,213,126, 0.43) 1px,transparent 1px, transparent 11px,rgba(130,213,126, 0.43) 11px, rgba(130,213,126, 0.43) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(0deg, rgba(130,213,126, 0.43) 0px, rgba(130,213,126, 0.43) 1px,transparent 1px, transparent 11px,rgba(130,213,126, 0.43) 11px, rgba(130,213,126, 0.43) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(135deg, rgba(130,213,126, 0.43) 0px, rgba(130,213,126, 0.43) 1px,transparent 1px, transparent 11px,rgba(130,213,126, 0.43) 11px, rgba(130,213,126, 0.43) 12px,transparent 12px, transparent 32px),linear-gradient(90deg, rgb(165,0,120),rgb(208,31,109));
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+.landing{
+    height: 100vh;
+    width: 100vw;
+    /*background-image: repeating-linear-gradient(45deg, rgba(252,194,0, 0.28) 0px, rgba(252,194,0, 0.28) 1px,transparent 1px, transparent 11px,rgba(252,194,0, 0.28) 11px, rgba(252,194,0, 0.28) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(90deg, rgba(252,194,0, 0.28) 0px, rgba(252,194,0, 0.28) 1px,transparent 1px, transparent 11px,rgba(252,194,0, 0.28) 11px, rgba(252,194,0, 0.28) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(0deg, rgba(252,194,0, 0.28) 0px, rgba(252,194,0, 0.28) 1px,transparent 1px, transparent 11px,rgba(252,194,0, 0.28) 11px, rgba(252,194,0, 0.28) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(135deg, rgba(252,194,0, 0.28) 0px, rgba(252,194,0, 0.28) 1px,transparent 1px, transparent 11px,rgba(252,194,0, 0.28) 11px, rgba(252,194,0, 0.28) 12px,transparent 12px, transparent 32px),linear-gradient(90deg, rgb(165,0,120),rgb(208,31,109));*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.brothers{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 1s ease-in-out;
+    transform-origin: top right;
+    background-image: linear-gradient(45deg, #5db342 0%, #fcc200 100%);
+    transform: translateX(100%) rotate(-60deg); 
+}
+.sisters{
+    height: 100vh;
+    width: 100vw;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 1s ease-in-out;
+    transform-origin: top left;
+    transform: translateX(-100%) rotate(60deg);
+    background-image: linear-gradient(-45deg, #fa640e 0%, #fcc200 100%);
+
+}
+.brothers .close{
+    position: fixed;
+    top:15px;
+    right:15px;
+}
+.sisters .close{
+    position: fixed;
+    top:15px;
+    left:15px;
+}
+.close{
+    color: #a50078;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+    z-index:50;
+}
+.close:hover{
+    color:#fa640e;
+}
+.landing h1{
+    font-family: 'Chango', cursive;
+    text-align: center;
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(45deg, #fa640e 0%, #fcc200 100%);
+    font-size:1.8rem;
+}
+.landing p{
+    font-family: 'Courgette', cursive;
+    padding: 15px;
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(45deg, #eceb16 0%, #fdfdaa 100%);
+    margin-bottom: 25px;
+    font-weight: 900;
+    text-align: center;
+    
+}
+.landing p:last-child{
+    margin-top: 25px;
+}
+.landing .btnbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.landing .btnbox .btn{
+    font-family: 'Raleway', sans-serif;
+    margin: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    background-image: linear-gradient(-45deg, #fa640e 0%, #fcc200 100%);
+    color: #073501;
+    padding: 15px;
+    transition: all 1s ease-in-out;
+}
+.landing .btnbox .btn:hover{
+    clip-path:polygon(0 0, 5% 50%, 0 100%, 100% 100%, 95% 50%, 100% 0);
+    background-image: linear-gradient(45deg, #5db342 0%, #fcc200 100%);
+    color: #742c03;
+}
+.card{
+    height: 350px;
+    width: 350px;
+    background-image: repeating-linear-gradient(0deg, hsla(335,79%,85%,0.1) 0px, hsla(335,79%,85%,0.1) 35px,transparent 35px, transparent 70px),repeating-linear-gradient(90deg, hsla(335,79%,85%,0.1) 0px, hsla(335,79%,85%,0.1) 35px,transparent 35px, transparent 70px),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 1vmin 1vmin #1112;
+    background-image: linear-gradient(158deg, rgba(84, 84, 84, 0.03) 0%, rgba(84, 84, 84, 0.03) 20%,rgba(219, 219, 219, 0.03) 20%, rgba(219, 219, 219, 0.03) 40%,rgba(54, 54, 54, 0.03) 40%, rgba(54, 54, 54, 0.03) 60%,rgba(99, 99, 99, 0.03) 60%, rgba(99, 99, 99, 0.03) 80%,rgba(92, 92, 92, 0.03) 80%, rgba(92, 92, 92, 0.03) 100%),linear-gradient(45deg, rgba(221, 221, 221, 0.02) 0%, rgba(221, 221, 221, 0.02) 14.286%,rgba(8, 8, 8, 0.02) 14.286%, rgba(8, 8, 8, 0.02) 28.572%,rgba(52, 52, 52, 0.02) 28.572%, rgba(52, 52, 52, 0.02) 42.858%,rgba(234, 234, 234, 0.02) 42.858%, rgba(234, 234, 234, 0.02) 57.144%,rgba(81, 81, 81, 0.02) 57.144%, rgba(81, 81, 81, 0.02) 71.42999999999999%,rgba(239, 239, 239, 0.02) 71.43%, rgba(239, 239, 239, 0.02) 85.71600000000001%,rgba(187, 187, 187, 0.02) 85.716%, rgba(187, 187, 187, 0.02) 100.002%),linear-gradient(109deg, rgba(33, 33, 33, 0.03) 0%, rgba(33, 33, 33, 0.03) 12.5%,rgba(147, 147, 147, 0.03) 12.5%, rgba(147, 147, 147, 0.03) 25%,rgba(131, 131, 131, 0.03) 25%, rgba(131, 131, 131, 0.03) 37.5%,rgba(151, 151, 151, 0.03) 37.5%, rgba(151, 151, 151, 0.03) 50%,rgba(211, 211, 211, 0.03) 50%, rgba(211, 211, 211, 0.03) 62.5%,rgba(39, 39, 39, 0.03) 62.5%, rgba(39, 39, 39, 0.03) 75%,rgba(55, 55, 55, 0.03) 75%, rgba(55, 55, 55, 0.03) 87.5%,rgba(82, 82, 82, 0.03) 87.5%, rgba(82, 82, 82, 0.03) 100%),linear-gradient(348deg, rgba(42, 42, 42, 0.02) 0%, rgba(42, 42, 42, 0.02) 20%,rgba(8, 8, 8, 0.02) 20%, rgba(8, 8, 8, 0.02) 40%,rgba(242, 242, 242, 0.02) 40%, rgba(242, 242, 242, 0.02) 60%,rgba(42, 42, 42, 0.02) 60%, rgba(42, 42, 42, 0.02) 80%,rgba(80, 80, 80, 0.02) 80%, rgba(80, 80, 80, 0.02) 100%),linear-gradient(120deg, rgba(106, 106, 106, 0.03) 0%, rgba(106, 106, 106, 0.03) 14.286%,rgba(67, 67, 67, 0.03) 14.286%, rgba(67, 67, 67, 0.03) 28.572%,rgba(134, 134, 134, 0.03) 28.572%, rgba(134, 134, 134, 0.03) 42.858%,rgba(19, 19, 19, 0.03) 42.858%, rgba(19, 19, 19, 0.03) 57.144%,rgba(101, 101, 101, 0.03) 57.144%, rgba(101, 101, 101, 0.03) 71.42999999999999%,rgba(205, 205, 205, 0.03) 71.43%, rgba(205, 205, 205, 0.03) 85.71600000000001%,rgba(53, 53, 53, 0.03) 85.716%, rgba(53, 53, 53, 0.03) 100.002%),linear-gradient(45deg, rgba(214, 214, 214, 0.03) 0%, rgba(214, 214, 214, 0.03) 16.667%,rgba(255, 255, 255, 0.03) 16.667%, rgba(255, 255, 255, 0.03) 33.334%,rgba(250, 250, 250, 0.03) 33.334%, rgba(250, 250, 250, 0.03) 50.001000000000005%,rgba(231, 231, 231, 0.03) 50.001%, rgba(231, 231, 231, 0.03) 66.668%,rgba(241, 241, 241, 0.03) 66.668%, rgba(241, 241, 241, 0.03) 83.33500000000001%,rgba(31, 31, 31, 0.03) 83.335%, rgba(31, 31, 31, 0.03) 100.002%),linear-gradient(59deg, rgba(224, 224, 224, 0.03) 0%, rgba(224, 224, 224, 0.03) 12.5%,rgba(97, 97, 97, 0.03) 12.5%, rgba(97, 97, 97, 0.03) 25%,rgba(143, 143, 143, 0.03) 25%, rgba(143, 143, 143, 0.03) 37.5%,rgba(110, 110, 110, 0.03) 37.5%, rgba(110, 110, 110, 0.03) 50%,rgba(34, 34, 34, 0.03) 50%, rgba(34, 34, 34, 0.03) 62.5%,rgba(155, 155, 155, 0.03) 62.5%, rgba(155, 155, 155, 0.03) 75%,rgba(249, 249, 249, 0.03) 75%, rgba(249, 249, 249, 0.03) 87.5%,rgba(179, 179, 179, 0.03) 87.5%, rgba(179, 179, 179, 0.03) 100%),linear-gradient(241deg, rgba(58, 58, 58, 0.02) 0%, rgba(58, 58, 58, 0.02) 25%,rgba(124, 124, 124, 0.02) 25%, rgba(124, 124, 124, 0.02) 50%,rgba(254, 254, 254, 0.02) 50%, rgba(254, 254, 254, 0.02) 75%,rgba(52, 52, 52, 0.02) 75%, rgba(52, 52, 52, 0.02) 100%),linear-gradient(90deg, #ffffff,#ffffff);
+}
+.card .essay{
+    height: 325px;
+    width: 325px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Courgette', cursive;
+    text-align: center;
+    overflow: scroll;
+    background-color: aqua;
+    display:grid;
+    place-items:center;
+    padding:10px;
+    background-image: repeating-linear-gradient(45deg, hsla(64,83%,54%,0.05) 0px, hsla(64,83%,54%,0.05) 1px,transparent 1px, transparent 11px,hsla(64,83%,54%,0.05) 11px, hsla(64,83%,54%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(90deg, hsla(64,83%,54%,0.05) 0px, hsla(64,83%,54%,0.05) 1px,transparent 1px, transparent 11px,hsla(64,83%,54%,0.05) 11px, hsla(64,83%,54%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(0deg, hsla(64,83%,54%,0.05) 0px, hsla(64,83%,54%,0.05) 1px,transparent 1px, transparent 11px,hsla(64,83%,54%,0.05) 11px, hsla(64,83%,54%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(135deg, hsla(64,83%,54%,0.05) 0px, hsla(64,83%,54%,0.05) 1px,transparent 1px, transparent 11px,hsla(64,83%,54%,0.05) 11px, hsla(64,83%,54%,0.05) 12px,transparent 12px, transparent 32px),linear-gradient(90deg, rgb(41, 27, 158),rgb(249, 77, 212));
+    color:#fff;
+}
+.page{
+    display: grid;
+    place-items:center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-size: 100% 100%;
+    z-index: 20;
+    background-color:black;
+}
+.page p{
+    font-family: 'Chango', cursive;
+    height: 300px;
+    width: 300px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    display: grid;
+    place-items:center;
+    text-align: center;
+    letter-spacing: 2px;
+    z-index: 10;
+}
+.page1 p{    
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(30deg, #eceb16 0%, #fcc200 100%); 
+    z-index:27;
+}
+.page2 p{    
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(-30deg, #fcc200 0%, #eceb16 100%); 
+    z-index:27;   
+}
+.page1{
+    clip-path: polygon(0 0,0% 100%,100% 100%);
+    /* background-image: linear-gradient(-45deg, #ec03ae 0%, #d01f6d 100%); */
+    transition: all 2s ease-in-out;
+    /* transform: translateX(-100%) translateY(100%); */
+}
+.page2{
+    clip-path: polygon(100% 0,0 0,100% 100%);
+    /* background-image: linear-gradient(-45deg, #eba8da 0%, #ec9dbf 100%); */
+    transition: all 2s ease-in-out;
+    /* transform: translateX(100%) translateY(-100%); */
+}
+.over{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background-color: #0009;
+    z-index: 25;
+}
+.cbtn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+    transform: translate(-50%,150%);
+    cursor: pointer;
+    display: grid;
+    place-items:center;
+    box-shadow: 0 0 0.5vmin 0.5vmin #1113;
+    transition: all 1s ease-in-out;
+    font-family: 'Raleway', sans-serif;
+    margin: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    background-image: linear-gradient(-45deg, #fa640e 0%, #fcc200 100%);
+    color: #073501;
+    padding: 15px;
+    z-index: 30;
+}
+.cbtn:hover{
+    clip-path:polygon(0 0, 5% 50%, 0 100%, 100% 100%, 95% 50%, 100% 0);
+    background-image: linear-gradient(45deg, #5db342 0%, #fcc200 100%);
+    color: #742c03;
+}
+.menu{
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    z-index: 40;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 25px;
+    transition: all 1s ease-in-out;
+    /* align-items: center; */
+}
+.mtext{
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    height: 90vh;
+    width: 90vw;
+    overflow-y: scroll;
+}
+.mtext b{
+    margin: 7px;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    transition: all 0.1s ease-in-out;
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(45deg, #a50078 0%, #d01f6d 100%);
+}
+.stext b{
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(45deg, #a50078 0%, #d01f6d 100%);
+}
+.stext b:hover{
+    background-image: linear-gradient(45deg, #073501 0%, #50b342 100%);
+    filter: blur(3px);
+}
+.smenu{
+    background-image: linear-gradient(45deg, #5db342 0%, #fcc200 100%);
+    /* transform: translateY(80%); */
+}
+.up{
+    position: absolute;
+    left:50%;
+    top: 0%;
+    transform: translate(-50%, -100%);
+    height: 50px;
+    width: 50px;
+    display: grid;
+    place-items: center;
+    background-image: linear-gradient(45deg, #a50078 0%, #d01f6d 100%);
+    cursor: pointer;
+    transition:all 1s ease-in-out;
+}
+.up i{
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(45deg, #5db342 0%, #fcc200 100%);
+    transition:all 1s ease-in-out;
+}
+.up:hover{
+    background-image: linear-gradient(45deg, #5db342 0%, #fcc200 100%);
+    clip-path:polygon(0 0, 5% 50%, 0 100%, 100% 100%, 95% 50%, 100% 0);
+}
+.up:hover i{
+    background-image: linear-gradient(45deg, #a50078 0%, #d01f6d 100%);
+}
+.bmenu{
+    background-image: linear-gradient(-45deg, #fa640e 0%, #fcc200 100%);
+}
+.brothers .up{
+    background-image: linear-gradient(-45deg, #fa640e 0%, #fcc200 100%);
+}
+.brothers .up i{
+    background-image: linear-gradient(45deg, #a50078 0%, #d01f6d 100%);
+}
+.loading{
+    height:100vh;
+    width:100vw;
+    position:absolute;
+    top:0;
+    left:0;
+    background-image: repeating-linear-gradient(135deg, rgba(252,194,0, 0.4) 0px, rgba(252,194,0, 0.4) 1px,transparent 1px, transparent 9px),repeating-linear-gradient(45deg, rgba(252,194,0, 0.4) 0px, rgba(252,194,0, 0.4) 1px,transparent 1px, transparent 9px),linear-gradient(90deg, rgb(208,31,109),rgb(165,0,120));
+    z-index:90;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.ldr{ 
+    height:150px; 
+    width:150px; 
+    border-radius:50%; 
+    position:relative;
+    /*position: absolute; 
+    top: 30%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+     margin-bottom:-115%; */ 
+     margin:7px;
+}
+ 
+.lin { 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    border-radius: 50%; 
+} 
+.o{ 
+    left: 0%; 
+    top: 0%; 
+    border-top: 17px solid black; 
+    animation: o 1.5s linear infinite; 
+} 
+.tw{ 
+    right: 0%; 
+    top: 0%; 
+    border-left: 17px solid black; 
+    animation: tw 1.5s linear infinite; 
+} 
+.thr{ 
+    right: 0%; 
+    bottom: 0%; 
+    border-right: 17px solid black; 
+    animation: thr 1.5s linear infinite; 
+} 
+@keyframes o {
+    0% {
+        transform: rotateX(45deg) rotateY(-45deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(45deg) rotateY(-45deg) rotateZ(360deg);
+    }
+}
+
+@keyframes tw {
+    0% {
+        transform: rotateX(45deg) rotateY(15deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(45deg) rotateY(15deg) rotateZ(360deg);
+    }
+}
+
+@keyframes thr {
+    0% {
+        transform: rotateX(30deg) rotateY(60deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(30deg) rotateY(60deg) rotateZ(360deg);
+    }    
+}
+.o, .tw, .thr{
+    border-color: #50b342;
+}
+.loading b{
+    font-family: 'Chango', cursive;
+    text-align: center;
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(45deg, #50b342 0%, #fcc200 100%);
+    font-size:1.8rem;
+    margin:12px;
+    /*position:absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); */
+}
+.loading p{
+    /*position:absolute;
+    top: 70%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);*/
+    font-family: 'Courgette', cursive;
+    padding: 7px;
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(15deg, #50b342 0%, #fdfdaa 100%);
+    font-weight: 700;
+    margin:12px;
+    text-align: center;
+    letter-spacing:1.5px;
+    width:100%;
+}
+.loadingbox{
+    height:100vh;
+    width:100vw;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:transparent;
+    overflow:hidden;
+}
+.loading1{
+    clip-path:polygon(0 0,100% 0,100% 20%,0 20%);
+    transition:all 1s ease-in-out;
+}
+.loading2{
+    clip-path:polygon(0 20%,100% 20%,100% 40%,0 40%);
+    transition:all 1.2s ease-in-out;
+}
+.loading3{
+    clip-path:polygon(0 40%,100% 40%,100% 60%,0 60%);
+    transition:all 1.4s ease-in-out;
+    
+}
+.loading4{
+    clip-path:polygon(0 60%,100% 60%,100% 80%,0 80%);
+    transition:all 1.6s ease-in-out;
+}
+.loading5{
+    clip-path:polygon(0 80%,100% 80%,100% 100%,0 100%);
+    transition:all 1.8s ease-in-out;
+}
+/*@keyframes left{
+    100%{
+        transform:translateX(-100%);
+    }
+}
+@keyframes right{
+    100%{
+        transform:translateX(100%);
+    }
+}*/
+.lbtn{
+    font-family: 'Raleway', sans-serif;
+    margin: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    background-image: linear-gradient(-45deg, #fa640e 0%, #fcc200 100%);
+    color: #073501;
+    padding: 15px;
+    transition: all 1s ease-in-out;
+    z-index:90;
+    position:absolute;
+    bottom:12px;
+    right:12px;
+}
+.lbtn:hover{
+    clip-path:polygon(0 0, 5% 50%, 0 100%, 100% 100%, 95% 50%, 100% 0);
+    background-image: linear-gradient(45deg, #5db342 0%, #fcc200 100%);
+    color: #742c03;
+}
+
+</style>
+    <div class="main">
+        <div class="landing">
+            <p>Someone who will understand who knows the way I fell in every situation, His concern is very real someone who has walked my ways and knows my every need, Times when he would see me cry his heart would nearly bleed, Everyone should have a brother just the way I do. Richly blessed is what I am....</p>
+            <h1>HAPPY RAKSHA BANDHAN</h1>
+            <p>A sister's a sister forever a bond that diminishes never a friend who is kindly and caring a sibling god chooses for sharing.Few ties as deep and profound and with so much affection abound.</p>
+            <div class="btnbox">
+                <div class="btn" id="bb
+                 tn" onclick="brbtn()">Brothers</div>
+                <div class="btn" id="sbtn" onclick="srbtn()">Sisters</div>
+            </div>
+        </div>
+        <div class="brothers" id="brother">
+            <div class="close" onclick="bclose()">
+                <i class="fas fa-times"></i>
+            </div>
+            <section class="card">
+                <div class="page page1" id="bpage1">
+                    <div class="over"></div>
+                    <p id="bname2"></p>
+                </div>
+                <div class="page page2" id="bpage2">
+                    <div class="over"></div>
+                    <p id="bname"></p>
+                </div>
+                <div class="cbtn" id="bbbtn" onclick="bop()">OPEN</div>
+                <p class="essay" id="bessay"></p>
+            </section>
+            <div class="menu bmenu" id="bmenu">
+                <div class="mtext stext">
+                   <b>(Click on the names)</b>
+                   
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/19911926.jpg',  'Abdul Bhaiya', 'Very sweet and kind hearted. Always there to listen to my problems and to help. Very caring toooooo. Have always been there by my side and is very positive and motivating person.')">Abdul Bhaiya</b> 
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/18341523.jpg', 'Abhishek Bhaiya', 'Very humble, polite, caring and kind hearted. Carries a friendly aura with him and always radiate positive vibes. Very glad to meet him.')">Abhishek Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/16871300.jpg', 'Aditya Bhaiya', 'One of the most calm and great personality I met on Sololearn. Have taught me great things during my journey on sl. Blessed to you have a brother like you.')">Aditya Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/18878974.jpg', 'Aditya Bhaiya', 'Coolest youtuber I ever met, always stays happy and knows how to make anyone smile. Its really awesome to get myself surrounded by you.')">Aditya Pardeshi Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/18565967.jpg', 'AKR Bhaiya', 'Very sincere and is always ready with solution to every problem. Also knows very nicely how to uplift someones sad mood. Really feels amaze and joyful in your comapny bhaiya.')">Akr Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/8450145.jpg', 'ASM Bhaiya', 'Smart and coolest bhaiya, always successful in making everyones mood awesome. Is a great coder and one can learn lots of things not only related to code but also life from him. I feel lucky to have the opportunity to know you.')">Akshay Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/21254623.jpg', 'Aim Bhaiya', 'Very nice coder as well as very nice human being. Learning a lot of new things from him. Feels incredible to get a chance to know such an amazing coder')">Aim Bhaiya</b>
+                  <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/9151475.jpg','Amardeep Sir', 'Awesomely, amazingly wonderfully magnificently gloriously charmingly gorgeously miraculously impressively mind-blowing coder, ground to the earth, very friendly, always there to help you, very caring and sweet. An amazing brother with pure heart. Feel very blessed to have him. ')">Amardeep Bhaiya</b>
+                  
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/10107008.jpg','By God Bhaiya', 'Very positive and stunning personality I ever met on sl. Always ready to help and guide you and very caring to. Feels very thrilled to meet such an outstanding person.')">Amit Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/4703319.jpg', 'Arafat Bhaiya', 'A marvellous coder, very friendly and kind hearted. Always carry a positive aura around him and extends his positive vibes to all people around him. Makes anyone smile.')">Arafat Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/11620855.jpg', 'Gurudev Ji', 'One of the person who always mentored me since my very start on sl. Have always shown me the correct way out my problems. Is very nice human and very helpful. I truly admire your support that you forwarded to me whenever I was struck with any kind of problems.')">Ashwani Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/15464694.jpg', 'Atomic Bhaiya', 'Phenomenal coder with awesomely amazingly wonderfully magnificently gloriously charmingly gorgeously codes and very creative and supportive tooo. Very fortunate to meet him..')">Atoms Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/19034561.jpg','Humanity Soldier','He is like a coconut. Hard from outside but soft from inside. In simpler words he never shows but in reality he cares. He is the person whom I can trust blindly. Always shows the right path whenever you are struck in a problem. Very fortunate to meet such a wonderful personality')">Atul Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/16882555.jpg','Sweet Danger Bhaiya','Always there by his friends even when whole world might be against that person. In short is more like the rarest best friend that everyone dreams to have and to add on is an awesome programmer to always ready to help you to deal witg all sort of problems ')">Ayush Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/18694154.jpg', 'Doodler Bhaiya', 'Very caring and friendly person. Always gives the best guidelines ever and can never see anyone sad, would always be there to uplift your mood and carries a friendly aura around him. I feel very lucky to meet him')">Coder Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/1969226.jpg', 'Cooldog Bhaiya', 'He is very kind and cheerful person. Always motivates , is caring and is an awesome like stromer tooo.')">Cooldog Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/14154819.jpg', 'Deadpool Bhaiya', 'Very friendly and cheerful person, Concerned about his friend and always there to help whenever ypu need him. Awesome motivator and a wonderful human. ')">Deadpool Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/16040035.jpg', 'Buddy', 'He is that buddy of my life, who’s always with me to support and encourage me. He is the person who was always with me to hear all of my problems and is the very best things that occured in my life. ')">Dipendra Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/14022015.jpg', 'Lawyer Bhaiya', 'I truly appreciate his kindness and thoughtfulness in more than words I can say and infinite times admire the aura of positivity that he spread. Very generous and humble person.')">Divyanshu Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/18806083.jpg', 'Ethan Bhaiya', 'Very decent and amiable person, always surrounded by positive aura and always spreading positivity wherever he is goes. Feels very glad to meet you bhaiya ')">Ethan Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/19137863.jpg', 'Glira Bhaiya', 'Awesome coder and very friendly in nature. Always lending a helping hand to everyone. A nice friend and amazing brother.')">Glira Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/19137863.jpg', 'Goke Bhaiya', 'Having a younger brother like him so caring, so friendly and so helpful is really a treasure. He knows very well how to make you smile within a second. Very stunning and coolest brother I ever met.')">Goke Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/17610000.jpg', 'Guddu Bhaiya', 'Very supportive, friendly, kind-hearted and helpful. Always there to listen to your problems, an awesome motivator and a great friend.')">Guddu Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/19583878.jpg', 'Hardik Bhaiya', 'An awesome and supportive person and cool minded.An amazing like stromer too. Glad to meet you bhaiya. ')">Hardik Bhaiya</b>
+                    <b onclick="bb('https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png', 'Jinav Bhaiya', 'He is very caring and awesome. Alaways spread friendliness around him. He is very supporting and is an awesome motivator, always carrying positive aura with him. Very glad to meet you bhaiyaaa.')">Jinav Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/14229595.jpg', 'Toy Gun Bhaiya', 'He is a spark of joy and enthusiasm, a role model and inspiration and to be honest he is the most unique and most wonderful person I ever met. The way he stand for what is right, no matter if it meant to be standing all alone, but he always stood for right, the way he support right and a lot is truly admirable')">Justin Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/19014619.jpg', 'Kit Katty', 'The best companion brother one can ever get. He is very protective and caring. Will always supporting you even when whole world is giving upon you. And knows very well how to keep secret. He is one of the rarest treasure one can get.')">Kartik Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/20596770.jpg', 'Bro Starry', 'The only star in my dark sky. The aura of affinity that he spread is something very unique. He is very caring, kind, supportive, motivating, friendly, kind hearted and one of the uniquest diamond one can ever have. I am very fotunate to get this golden chance to have him as my bro starry. ')">Krishna Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/5600732.jpg', 'Lets Integreat Bhaiya', 'He is very kind hearted, supportive and motivating. One of the nice person I met on Sololearn. Very glad to meet you bhaiya.')">Lets Integreat Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/19042355.jpg', 'Love Bhaiya', 'He is very caring and understanding, always there to listen to your problems and tries his level best to solve it. He is very kind hearted and friendly. In short I can say that he is a gem that I got.')">Love Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/20020230.jpg', 'Sarvgyani Bhaiya', 'He is very nice person. Friendly by nature and always makes everyone smile where ever he is. Carries an awesome aura of positivity around him.')">Mahammad Shaikh Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/17782587.jpg', 'Madcoder Bhaiya', 'Awesome coder, kind hearted person and very helpful by nature. He always stays calm and if you are in any problem he will try his level best to solve it.')">Madcoder Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/19184561.jpg', 'Evil Twin', 'One of the best thing that ever happened with me on sl was meeting him. He is one of the most wonderful person I ever met. He has a very deep understanding, very funny, always carry a friendly aura around him, one can share all hsi/her problems without any hesitation with him, awesome secret keeper,  knows very well how to uplift someones mood and cherry on the top ge would be there to help you even at mid night. I feel myself super duper lucky to have him as my evil twin.')">Maskman Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/18109487.jpg', 'Balloon Bhaiya', 'According to me he is perfect, constituing of awesome coding skills, always friendly with everyone around, there to help you out whenever you are struck and kind hearted too. Glad to get a chance to meet him.')">Namit Bhaiya</b>                    
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/18940288.jpg', 'Toodler Bhaiya', 'A brother like him is a gift to the heart, a friend to the spirit. Very friendly in nature and is a fun box always spreading smiles where ever he goes.')">Narpath Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/16923644.jpg', 'Navneet Bhaiya', 'A duet combination of an awesome friend and coolest brother. He is very caring, friendly and most incredible person I ever met on Sololearn. Always there by your side no matter even if you are having a dark day.')">Navneet Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/18704978.jpg', 'Reporter Bhaiya', 'He is very kind hearted and helpful person. Blessed to have him as my brother. Very friendly in nature too.')">Nilesh Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/9027227.jpg', 'Nova Sir', 'Friendly across all situations and always concerned about others feelings too. A great brother one can ever have.')">Nova Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/18050446.jpg', 'Chief Bhaiya', 'He is inclined toward big ideas, genuinely concerned and always suceed in making others happy.He is very caring and considerate about others feelings too.')">Parth Bhaiya</b>
+                    
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/17494293.jpg', 'Piyush Sir', 'He always put other people first. A great friend. fun person always there to put smile on others face and make everyone comfortable around them.')">Piyush Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/15404118.jpg', 'Einstein Bhaiya', 'He is very intelligent and inclined towards his goals. Always carry a friendly aura around him and is very positive person to be around with.')">Prince Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/18870486.jpg', 'Prince Bhaiya', 'He is someone whom you know and can always depend upon. Very amiable and a great person to be around with.')">Prince Sukhija Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/17904120.jpg', 'Program- -mer Sir', 'He is inclined toward big ideas, awesome code concepts, wild possibilities of unique ideas and is down to earth. Very friendly and a wonderful person to be around.')">Programmer Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/14808477.jpg', 'Lil Boss', 'A person who loves, who cares, who sees a persons need and fills it, who encourages and lifts people up, who spends energy on others rather than himself. He is someone who touches each life he enters as he ripples of kindness flow outward. For me he is a special treasureHe is the umbrella that shields me from hail, sun and rain he is the healer who helps me deal with life’s pain. To me, he is more than just a brother. He is also my best friend. I truly admire selfless love and affection. He is best trusted advisor one can dream of.')">Raghav Bhaiya</b>
+                   
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/19973652.jpg', 'Rahul Bhaiya', 'He is the one who will do whatever it takes to make you happy, concerned about others feelings and always there to motivate you.')">Rahul Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/5930492.jpg', 'Raj Bhaiya', 'He is very determinant, goal oriented, caring, friendly and kind hearted. In nut shell he is a marvellous person to surround yourseld with.')">Raj Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/18725776.jpg', 'Rishabh Bhaiya', 'Goal oriented, friendly, always put a smile on the face of people around him and is very skillful in uplifiting everyones mood.')">Rishabh Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/16966833.jpg', 'Rishav Bhaiya', 'Loving, caring, always put other people first, considers others problems as his own and tries his best to solve him. Always carries an aura of happiness around him.')">Rishav Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/21397794.jpg', 'Robo Bhaiya', 'He is very understanding, friendly across all situations, have active imagination and is an awesome friend one can have')">Robot Bhaiya</b>
+                   
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/16134163.jpg', 'Quick Witted', 'Who needs a French Teacher when you have a brother like him. Very intelligent and friendly tooo. Gives you the best life lessons and awesome advisor. He is a wonderful motivator too.')">Rushat Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/8855482.jpg', 'Sahil Bhaiya', 'Very nice story writer, caring, humble, friendly and kind hearted human. Always there to listen and share youe problems. Very glad to meet him.')">Sahil Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/18669173.jpg', 'Wolveri- -ne Sir', 'He is very polite, generous and considerate. He is very energetic and very wise to help you out from problems, and reacts very calmly in difficult situations too.')">Satnam Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/19742356.jpg', 'Saurabh Bhaiya', 'He is intuitive, caring, reliable and trustworthy. He is very friendly and cheerful. Always makes everyone smile.I feel very lucky to meet him.')">Saurabh Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/12767781.jpg', 'Shreyansh Bhaiya', 'He is persistent, decisive, ambitious and determinant. Very glad to meet you bhaiya.')">Shreyansh Bhaiya</b>
+                    
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/9748903.jpg', 'Stranger Bhaiya', 'He is very elated, exuberant, cheerful, delighted and ecstatic. He carries a friendly aura around him and one can blindly rely on him for his/her problems. He is one of the great person to be around with. ')">Stranger Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/18709228.jpg', 'Dragon Bhaiya', 'There are infinite ways to describe him… nice, friendly, so marvellous, amazing, very helpful, funny, kind, thoughtful, fearless, always there for his friends, determinant. People like him are a real gem and are very hard to find. I feel very fortunate to get the golden chance to meet him.')">Tanay Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/19356973.jpg', 'Bro Nutty', 'He is a inspiration for me on sololearn. Everything he does is filled with incredible passion and perfection, and I admire that in every possible way. One of the most friendly and cheerful person I ever met on Sololearn')">Tejas Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/19457191.jpg', 'Ujwal Bhaiya', 'He always know how to make anyone smile. Blessed to have him in my life. His dedication, enthusiasm and insight are really inspiring. He is very friendly and caring too.')">Ujwal Bhaiya</b>
+                    
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/10640404.jpg', 'Vachila Bhaiya', 'An awesome coder and very kind friend I ever met on Sololearn. He is very polite and always there to help you whenever you are struck with any problem.')">Vachila Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/18352321.jpg', 'Vaibhav Sir', 'He is very sincere and humble. Always supports and motivates people around him. One can always get great advises from him. Always gives wonderful advices and is an awesome mentor. Whenever struck with any problem just knock his door and you will eventually see your problems fade away')">Vaibhav Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/14155827.jpg', 'Vats Bhaiya', 'One of greatest gifts one can have is having him as a brother. He is very polite, humble, caring, supporting and kind hearted. He always carry a positive aura around him. Very fortunate that I met yoy')">Vats Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/15117771.jpg', 'Co Consp- -irator Bhaiya', 'Who needs a superhero, when one got him. He is truly da best, have been there with me as my alpha since my very start on sl and is more like a mentor,path guider and my partner in crime. Its truly a blessing to have him as elder brother')">Vinayak Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/17826737.jpg', 'Vinayak Bhaiya', 'He is someone who knows very well how to make someone smile and is other name of funbox. Always cheerful and makes everyone smile. Very caring and friendly too. In short he is an amazing brother one can ask for.')">Vinayak Pandey Bhaiya</b>
+                    <b onclick="bb('https://api.sololearn.com/Uploads/Avatars/19457006.jpg', 'Bud', 'He is someone who will always believe in you even when you have lost all hopes within you. Very positive person I ever met on sololearn and cherry on the top he is very caring, according to me the most csring person I ever met. Very glad to meet you.')">Yash Bhaiya</b>
+                </div>
+                <div class="up" onclick="bup()">
+                    <i class="fas fa-angle-double-up"></i>
+        
+                </div>
+
+            </div>
+        </div>
+        <div class="sisters" id="sister">
+            <div class="close" onclick="sclose()">
+                <i class="fas fa-times"></i>
+            </div>  
+            <section class="card">
+                <div class="page page1" id="page1">
+                    <div class="over"></div>
+                    <p id ="sname"></p>
+                </div>
+                <div class="page page2" id="page2">
+                    <div class="over"></div>
+                    <p id="sname2"></p>
+                </div>
+                <div class="cbtn" id="btn" onclick="op()">OPEN</div>
+                <p class="essay" id="sessay"></p>
+            </section>
+            <div class="menu smenu" id="smenu">
+                <div class="mtext stext">
+                    <b>(Click on the names)</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/12942084.jpg', 'Queenie Di', 'She is very strong, brave and awesome sister one can dream of. Very determinant, ambitious, goal oriented caring and friendly. I feel very overwhelmed to get a chance to meet her.')">Aakaansha Di</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/14753434.jpg', 'Marshma- -llow', 'Very sweet, caring and friendly sista. A pure and kind hearted soul I ever met on Sololearn. Always carry a friendly aura around her. Very glad to meet her.')">Addy Sis</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/19394415.jpg', 'Ambica Sis', 'Very amiable, polite and caring sis. Always brings smile on everyones face. Feel blessed to know her.')">Ambica Sis</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/18579574.jpg', 'Anjali Sis', 'Very friendly and nice. Always put others first and tries to make everyone smile. Very caring and kind hearted. Glad to know her.')">Anjali Sis</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/18589196.jpg', 'Aradhana Di', 'The most wonderful soul I met on sololearn. Very caring di. Will always understands your problems and will try her best to solve it. No one can escape without smiling when talking to her. Very friendly and supportive. Always there motivating you when you feel down. Awesome challenger too. ')">Aradhana Di</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/19436832.jpg', 'Astha Sis', 'Very friendly and helpful. Always there to help you whenever you ask for. Very glad to meet her.')">Astha Sis</b>
+                    
+                    <b onclick="sc('https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png', 'Astha Sis', 'She is someone who brighten ups every place where she goes. Is a good listener, very understanding, caring, friendly and always lean a shoulder to you whenever you feel down. She is also a nice secret keeper.')">Astha Sis</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/14174430.jpg', 'Goldie', 'Sometimes I wonder if she got a heart of gold, really very caring, sweet and understanding. Always there to share your problems, bring a bright smile on your face and will give you the best motivation and support ever. Who needs an advisor when you have a sis like her giving best advices ever.')">Bartika Sis</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/17555554.jpg', 'Deepa Sis', 'Best friend in form of sis one can get. Very caring and always put others first. Will try her level best to help you out of your problem. Is an awesome supporter and motivator. Blessed to meet such a kind soul')">Deepanjali Di</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/15651375.jpg', 'Doomsday Sis', 'Very friendly and into studies. Always carry a positive aura around her. Very friendly and kind hearted. Glad to meet her.')">Doomsday Sis</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/14859274.jpg', 'Fariha Sis', 'Very special to me. She is someone whose smile could even put the stars’ shine to the test. She is very caring, humble, polite and kind hearted. Brighten ups every place where ever she goes. Always succeeds to make everyone smile with her sweet talks.')">Fariha Sis</b>
+                    
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/20095418.jpg', 'Roochie Sis', 'No matter how hard you try but getting a sister like her totally unique and caring is way too impossible. She is someone who can make you smile full heartedly even in difficult of all situations. In short she is more like a mini fun box.')">I Am Roochie Sis</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/19480187.jpg', 'Jaismine Sis', 'She is a steadfast friend and a great support whenever you feel weak. She has a great understanding and would be with you no matter how diffucult is the situation. Very glad to meet you.')">Jaismine Sis</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/18833908.jpg', 'Lamya Sis', 'Very nice and caring. Always carry a friendly aura around her.Feel blessed to get a golden chance to meet her.')">Lamya Sis</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/21089809.jpg', 'Sarah Sis', 'Always smiling and making everyone happy around her. Friendly and will always make you feel comfortable whenever you are around her. An awesome sis one can have.')">Little Cherry Sis</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/15227449.jpg', 'Muskan Sis', 'Positivity and caring box. Always radiating poaitive vibes. Very friendly and humble. It feels very pleasant to be around with her. Very glad to met her.')">Muskan Sis</b>
+                    
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/20745717.jpg', 'Narayani Sis', 'Very supportive and innocent. You will always have her back whenever you are in any difficult situation even when the whole world is giving upon you. Very caring too.')">Narayani Sis</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/18388726.jpg', 'Nikhat Di', 'Very friendly and caring. You can always rely on her with your secrets. Tries her level best to solve your problems. Very glad that I met her.')">Nikhat Di</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/18736943.jpg', 'Kaleidos- -copic Di', 'The best thing that happened to me on sololearn was getting a chance to meet her. One of the honest soul I met. Just like kaleidoscope have a collection of awesome qualities one can dream of. Very caring, friendly, humble, helpful, supportive, bwst advisor and a fun box.')">Pari Di</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/18608933.jpg', 'Piku Di', 'Best sisteriend one can have. She is funniest, prettiest and happiest person I ever met on sololearn, always radiating happy vibes wherever she goes. For me she is best friend in sister disguise.')">Pikachu Di</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/19111317.jpg', 'Cherry Cake Di', 'She is someone, who’s seen me at my worst, who’s always got my back, who when I’m sad, will know first,  who knows what makes you smile, who knows me inside out. She is someone, who believes in you no matter what. In short she is my human diary.')">Prachi Di</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/13000293.jpg', 'Priyanshi Sis', 'Very polite, caring and kind hearted. She is best person whom you an trust blindly to keep yoyr secrets. Very glad to meet her.')">Priyanshi Sis</b>
+                    
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/14931694.jpg', 'Rimjhim Di', 'She is always very considerate about others feelings and carries a friendly aura around her. Always radiates positive vibes wherever she goes. An awesome friend one can wish for.')">Rimjhim Di</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/6804430.jpg', 'Rk Di', 'Always there for you whenever you need her. A wonderful soul I ever met on Sololearn. An awesome secret keeper, amazing problem solver and incredible motivator. She is someone who will scold you in the most sweetest words whenever you do wrong and would always be there by your back to support you. Feels blessed to have her as my elder sister.')">Rk Di</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/6241792.jpg', 'Rose Di', 'She is very polite and humble, carrying a friendly aura with her. Very glad to meet her.')">Rose Di</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/18627970.jpg', 'Safalta Sis', 'She is very sweet and kind hearted. Always there to help ypu. Always put others first. Very supporting and have a great understanding')">Safalta Sis</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/19181491.jpg', 'Sakshi Sis', 'One of the best thing that happened to me on sololearn is getting a chance to meet such an awesome and pure soul. Very friendly, sweetness overloaded, cating, supportive and very very helpful. Have a great understanding and always make everyone smile.')">Sakshi Sis</b>
+                    
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/19107895.jpg', 'Shruti Sis', 'She will always be by your side whether in times of joy or trouble, celebration or crisis. Very caring, supportive and carries a positive aura with her. ')">Shruti Sis</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/17665461.jpg', 'Soni Di', 'Words cant do the justice of appreciating the efforts she put to encourage you. Very supporting and friendly. Always put others first and would always be there to hear your problems and tries her level best to solve it.')">Skr Di</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/18255097.jpg', 'Sofi Sis', 'She is very friendly, caring, kind hearted and sweet. Always puts others first and is an awesome person to be around with.')">Sofi Sis</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/10109012.jpg', 'Sparshika Di', 'She is a jewel, a priceless, one-of-a-kind gem who makes everyone smile. Very friendly and always radiates positive vibes. Feels blessed to get the golden chance to meet her.')">Sparshika Di</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/18088635.jpg', 'Suhana Sis', 'An awesome encourager, a true friend one can wish for, very supportive and caring. She is someone on whom you can always rely upon with your secrets and problems. Feels very blessed to have her as my sister.')">Suhana Sis</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/18853569.jpg', 'Sweety Sis', 'Very friendly, polite, caring and nice. Always carry an aura of happiness with her. Makes everyone smile around her. Glad to know her.')">Sweety Sis</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/14762808.jpg', 'Tanisha Sis', 'She is like an angel, with a love that always glows. One of greatest gifts one can demand for. I feel very fortunate that I met you')">Tanisha Sis</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/12410955.jpg', 'Toto Sis', 'She is very friendly, polite, sweet and humble. Very glad to meet you sista. ')">Toto Sis</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/20617819.jpg', 'Tuktuk Di', 'During yours highs and lows, hurts and happiness, she is someone who will always be there qith you through thick and thin. You will always find her sharing laughter and wiping off your tears. I feel very blessed to meet you di.')">Tuktuk Di</b>
+                    <b onclick="sc('https://api.sololearn.com/Uploads/Avatars/14844042.jpg', 'Jellybean Di', 'She is a treasure one cant even dream of loosing. An awesomely amazingly wonderfully magnificently gloriously charmingly gorgeously miraculously impressively mind-blowing person I ever met on sololearn. She is very friendly, caring and supportive. Always radiate positive vibes and carries an aura of positivity with her.')">Vanshika Di</b>
+                    
+                </div>
+                <div class="up" onclick="sup()">
+                    <i class="fas fa-angle-double-up"></i>
+        
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="loadingbox" id="lb">
+        <div class="loading loading1" id="l1">
+            <p>On this wonderful occasion, celebrate the bond of love with all your heart. Wish you a Happy Raksha Bandhan! Thank you to all my brothers and sisters on sololearn for supporting me and being there for me.</p>
+            <div class="ldr"> 
+              <div class="lin o"></div> 
+              <div class="lin tw"></div> 
+              <div class="lin thr"></div> 
+           </div>  
+           <b>LOADING...</b>
+           <p>        
+         I, who have no sisters or brothers, look with some degree of innocent envy on those who may be said to be born to friends.
+        I might not express my love for you often, but today on the occasion of Rakhi, I promise you that I’ll always be there for you.</p>
+    </div>
+    <div class="loading loading2" id="l2">
+            <p>On this wonderful occasion, celebrate the bond of love with all your heart. Wish you a Happy Raksha Bandhan! Thank you to all my brothers and sisters on sololearn for supporting me and being there for me.</p>
+            <div class="ldr"> 
+              <div class="lin o"></div> 
+              <div class="lin tw"></div> 
+              <div class="lin thr"></div> 
+           </div>  
+           <b>LOADING...</b>
+           <p>        
+         I, who have no sisters or brothers, look with some degree of innocent envy on those who may be said to be born to friends.
+        I might not express my love for you often, but today on the occasion of Rakhi, I promise you that I’ll always be there for you.</p>
+    </div>
+    <div class="loading loading3" id="l3">
+            <p>On this wonderful occasion, celebrate the bond of love with all your heart. Wish you a Happy Raksha Bandhan! Thank you to all my brothers and sisters on sololearn for supporting me and being there for me.</p>
+            <div class="ldr"> 
+              <div class="lin o"></div> 
+              <div class="lin tw"></div> 
+              <div class="lin thr"></div> 
+           </div>  
+           <b>LOADING...</b>
+           <p>        
+         I, who have no sisters or brothers, look with some degree of innocent envy on those who may be said to be born to friends.
+        I might not express my love for you often, but today on the occasion of Rakhi, I promise you that I’ll always be there for you.</p>
+    </div>
+    <div class="loading loading4" id="l4">
+            <p>On this wonderful occasion, celebrate the bond of love with all your heart. Wish you a Happy Raksha Bandhan! Thank you to all my brothers and sisters on sololearn for supporting me and being there for me.</p>
+            <div class="ldr"> 
+              <div class="lin o"></div> 
+              <div class="lin tw"></div> 
+              <div class="lin thr"></div> 
+           </div>  
+           <b>LOADING...</b>
+           <p>        
+         I, who have no sisters or brothers, look with some degree of innocent envy on those who may be said to be born to friends.
+        I might not express my love for you often, but today on the occasion of Rakhi, I promise you that I’ll always be there for you.</p>
+    </div>
+    <div class="loading loading5" id="l5">
+            <p>On this wonderful occasion, celebrate the bond of love with all your heart. Wish you a Happy Raksha Bandhan! Thank you to all my brothers and sisters on sololearn for supporting me and being there for me.</p>
+            <div class="ldr"> 
+              <div class="lin o"></div> 
+              <div class="lin tw"></div> 
+              <div class="lin thr"></div> 
+           </div>  
+           <b>LOADING...</b>
+           <p>        
+         I, who have no sisters or brothers, look with some degree of innocent envy on those who may be said to be born to friends.
+        I might not express my love for you often, but today on the occasion of Rakhi, I promise you that I’ll always be there for you.</p>
+    </div>
+    <div class="lbtn" id="lbtn" onclick="sk()">SKIP</div>
+    </div>
+    <script>
+        var brother = document.getElementById("brother");
+        var sister = document.getElementById("sister");
+        var bbtn = document.getElementById("bbtn");
+        var sbtn = document.getElementById("sbtn");
+        var page1 = document.getElementById('page1');
+        var page2 = document.getElementById('page2');
+        var btn = document.getElementById('btn');
+        var smenu = document.getElementById('smenu');
+        var bpage1 = document.getElementById('bpage1');
+        var bpage2 = document.getElementById('bpage2');
+        var bbbtn = document.getElementById('bbbtn');
+        var bmenu = document.getElementById('bmenu');
+        var bessay = document.getElementById('bessay');
+        var bname = document.getElementById('bname');
+        var bname2 = document.getElementById('bname2');
+        var sessay = document.getElementById('sessay');
+        var sname = document.getElementById('sname');
+        var sname2 = document.getElementById('sname2');
+        var lb = document.getElementById('lb');
+        var l1 = document.getElementById('l1');
+        var l2 = document.getElementById('l2');
+        var l3 = document.getElementById('l3');
+        var l4 = document.getElementById('l4');
+        var l5 = document.getElementById('l5');
+        var lbtn = document.getElementById('lbtn');
+        var sound = new Howl({
+  src:"https://dl.dropbox.com/s/53vklwjxkbc5yfd/nightcore%20hey%20brother%20%20switching%20vocals%20%20%20lyrics.mp3?dl=1"
+,
+loop: true});
+  
+        function op(){
+            page1.style.transform = "translateX(-100%) translateY(100%)";
+            page2.style.transform = "translateX(100%) translateY(-100%)";
+            btn.style.transform = "scale(0) translate(-50%,50%)";
+            btn.style.transition = "0.2s";
+            page1.style.transition = "2s";
+            page2.style.transition = "2s";
+        }
+        function bop(){
+            bpage1.style.transform = "translateX(-100%) translateY(100%)";
+            bpage2.style.transform = "translateX(100%) translateY(-100%)";
+            bbbtn.style.transform = "scale(0) translate(-50%,50%)";
+            bbbtn.style.transition = "0.2s";
+            bpage1.style.transition = "2s";
+            bpage2.style.transition = "2s";
+        }
+        function brbtn(){
+            brother.style.transform="translateX(0) rotate(0)";
+        }
+        function srbtn(){
+            sister.style.transform="translateX(0) rotate(0)";
+        }
+        function sclose(){
+            sister.style.transform="translateX(-100%) rotate(60deg)";
+        }
+        function bclose(){
+            brother.style.transform="translateX(100%) rotate(-60deg)";
+        }
+        function sc(sbg,siname,siessay){
+            smenu.style.transform="translateY(100%)";
+            smenu.style.transition = "2s";
+            page1.style.backgroundImage = "url("+sbg+")";            
+            page2.style.backgroundImage = "url("+sbg+")";
+            sessay.textContent=siessay;
+            sname.textContent=siname;
+            sname2.textContent=siname;
+            page1.style.transform = "translateX(0%) translateY(0%)";
+            page2.style.transform = "translateX(0%) translateY(0%)";
+            btn.style.transform = "scale(1) translate(-50%,150%)";
+            page1.style.transition = "0.2s";
+            page2.style.transition = "0.2s";
+        }
+        function sup(){
+            smenu.style.transform="translateY(0%)";
+            smenu.style.transition = "0.5s";
+        }
+        function bb(bg,name,essay){
+            
+      bmenu.style.transform="translateY(100%)";
+            bmenu.style.transition = "2s";
+            bpage1.style.backgroundImage = "url("+bg+")";            
+            bpage2.style.backgroundImage = "url("+bg+")";
+            bessay.textContent=essay;
+            bname.textContent=name;
+            bname2.textContent=name;
+            bpage1.style.transform = "translateX(0%) translateY(0%)";
+            bpage2.style.transform = "translateX(0%) translateY(0%)";
+            bbbtn.style.transform = "scale(1) translate(-50%,150%)";
+            bpage1.style.transition = "0.2s";
+            bpage2.style.transition = "0.2s";
+        }
+        function bup(){
+            bmenu.style.transform="translateY(0%)";
+           bmenu.style.transition = "0.5s"; 
+        }
+        function sk(){
+            l1.style.transform="translateX(-100%)";
+            l2.style.transform="translateX(100%)";
+           l3.style.transform="translateX(-100%)"; 
+           l4.style.transform="translateX(100%)";
+         l5.style.transform="translateX(-100%)"; 
+         lbtn.style.display="none"
+         sound.play();
+         setTimeout(() => {
+                lb.style.display="none";
+            }, 2000)
+        }
+        
+        window.onload = function(){
+        sound.play();
+        setTimeout(() => {
+        l1.style.transform="translateX(-100%)";
+            l2.style.transform="translateX(100%)";
+           l3.style.transform="translateX(-100%)"; 
+           l4.style.transform="translateX(100%)";
+         l5.style.transform="translateX(-100%)"; 
+         lbtn.style.display="none";
+         }, 3000)
+         
+         setTimeout(() => {
+                lb.style.display="none";
+            }, 5000)
+        }
+        
+
+    </script>
+</body>
+</html>
